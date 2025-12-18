@@ -1,19 +1,18 @@
-.IntroductionTitle{
-   font-size: clamp(2rem, 5vw, 6rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2rem;
-    min-height: 75px;
-    border-color: rgb(0, 0, 0);
-    font-style: bold;
+.Introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#IntroductionSubtitle{
-    font-size: clamp(1.2rem, 2.8vw, 2rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2rem;
-    min-height: 50px;
+.IntroductionTitle {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 700;
+}
+
+.IntroductionSubtitle {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0.5rem;
 }
