@@ -11,11 +11,11 @@ body {
 /* Zona del título principal */
 .TitleZone {
   display: flex;
-  flex-direction: column; /* Apila título y subtítulo verticalmente */
-  align-items: start; /* Centra horizontalmente */
+  flex-direction: row; /* Apila título y subtítulo verticalmente */
+  align-items: flex-start; /* Centra horizontalmente */
   padding-top: 2rem; /* Espacio desde arriba */
   margin-bottom: 3rem; /* Espacio debajo del título */
-  text-align: center; /* Centra el texto */
+  text-align: left; /* Centra el texto */
 }
 
 /* Título principal - tamaño responsive */
@@ -24,6 +24,20 @@ body {
   font-weight: 700; /* Negrita */
   margin: 0;
 }
+
+.TitleTextZone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.ProfileImage {
+  width: 250px;
+  border-radius: 80%;
+  object-fit: cover;
+}
+
 
 /* Subtítulo - ligeramente más pequeño y transparente */
 .IntroductionSubtitle {
