@@ -12,7 +12,7 @@ body {
 .TitleZone {
   display: flex;
   flex-direction: column; /* Apila título y subtítulo verticalmente */
-  align-items: center; /* Centra horizontalmente */
+  align-items: start; /* Centra horizontalmente */
   padding-top: 2rem; /* Espacio desde arriba */
   margin-bottom: 3rem; /* Espacio debajo del título */
   text-align: center; /* Centra el texto */
@@ -37,7 +37,7 @@ body {
 .AboutMeSection {
   max-width: 800px; /* Ancho máximo para legibilidad */
   width: 100%; /* Ocupa todo el ancho disponible */
-  margin-bottom: 4rem; /* Espacio debajo de la sección */
+  margin-bottom: 2rem; /* Espacio debajo de la sección */
   padding: 2rem; /* Espacio interno */
   text-align: center; /* Centra el texto */
 }
