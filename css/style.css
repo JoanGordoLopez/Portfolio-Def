@@ -1,12 +1,11 @@
 .Introduction {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 
 .IntroductionTitle {
-  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 700;
 }
 
@@ -23,6 +22,9 @@ body {
   justify-content: center;
 }
 
+.InitialSections {
+  display: flex;
+}
 .container {
   width: 100%;
   max-width: 1200px;
@@ -32,9 +34,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  padding-top: 3rem;
 }
 
+div:has(.AboutMeButton) {
+  display: flex;
+  justify-content: center;
+  margin-top: 60vh;
+}
 
 @media (max-width: 768px) {
   .IntroductionSubtitle {
