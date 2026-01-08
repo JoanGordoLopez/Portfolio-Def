@@ -1,49 +1,112 @@
-.Introduction {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.IntroductionTitle {
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: 700;
-}
-
-.IntroductionSubtitle {
-  font-size: clamp(1.3rem, 3vw, 2rem);
-  font-weight: 400;
-  opacity: 0.8;
-  margin-top: 0.5rem;
-}
-
+/* Configuración del body - centra todo el contenido horizontalmente */
 body {
   margin: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Columna para apilar elementos verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  padding: 0 20px; /* Añade espacio en los laterales */
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
 }
 
-.InitialSections {
+/* Zona del título principal */
+.TitleZone {
   display: flex;
-}
-.container {
-  width: 100%;
-  max-width: 1200px;
-}
-
-.Introduction {
-  display: flex;
-  flex-direction: column;
-  padding-top: 3rem;
+  flex-direction: column; /* Apila título y subtítulo verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  padding-top: 2rem; /* Espacio desde arriba */
+  margin-bottom: 3rem; /* Espacio debajo del título */
+  text-align: center; /* Centra el texto */
 }
 
-div:has(.AboutMeButton) {
-  display: flex;
-  justify-content: center;
-  margin-top: 60vh;
+/* Título principal - tamaño responsive */
+.IntroductionTitle {
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Se ajusta según el ancho de pantalla */
+  font-weight: 700; /* Negrita */
+  margin: 0;
 }
 
+/* Subtítulo - ligeramente más pequeño y transparente */
+.IntroductionSubtitle {
+  font-size: clamp(1.3rem, 3vw, 2rem); /* Tamaño responsive */
+  font-weight: 400; /* Peso normal */
+  opacity: 0.8; /* Ligeramente transparente */
+  margin-top: 0.5rem; /* Pequeño espacio sobre el subtítulo */
+}
+
+/* Sección "Sobre mi" - contenedor principal */
+.AboutMeSection {
+  max-width: 800px; /* Ancho máximo para legibilidad */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-bottom: 4rem; /* Espacio debajo de la sección */
+  padding: 2rem; /* Espacio interno */
+  text-align: center; /* Centra el texto */
+}
+
+/* Título de la sección "Sobre mi" */
+.SectionTitle {
+  font-size: clamp(1.2rem, 3vw, 1.8rem); /* Tamaño responsive */
+  font-weight: 600; /* Semi-negrita */
+  margin-bottom: 1.5rem; /* Espacio debajo del título */
+  color: #333; /* Color del texto */
+}
+
+/* Texto de presentación - espacio reservado */
+.IntroductionText {
+  font-size: clamp(1rem, 2vw, 1.1rem); /* Tamaño responsive */
+  line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+  color: #666; /* Color gris suave */
+  margin: 0;
+  text-align: justify;
+}
+
+/* Sección de botones - posicionada más abajo */
+.ButtonsSection {
+  display: flex; /* Alinea los botones en fila */
+  gap: 1.5rem; /* Espacio entre botones */
+  flex-wrap: wrap; /* Permite que los botones bajen de línea en pantallas pequeñas */
+  justify-content: center; /* Centra los botones */
+  margin-top: 3rem; /* Espacio desde la sección anterior */
+  margin-bottom: 3rem; /* Espacio debajo de los botones */
+}
+
+/* Estilos base para todos los botones */
+.OtherSection1,
+.OtherSection2,
+.OtherSection3 {
+  padding: 0.8rem 2rem; /* Espacio interno del botón */
+  font-size: 1rem; /* Tamaño de texto */
+  border: 2px solid #333; /* Borde del botón */
+  background-color: transparent; /* Fondo transparente */
+  color: #333; /* Color del texto */
+  cursor: pointer; /* Cursor de mano al pasar por encima */
+  border-radius: 8px; /* Esquinas redondeadas */
+  transition: all 0.3s ease; /* Transición suave para efectos hover */
+}
+
+/* Efecto hover - cuando pasas el ratón por encima */
+.OtherSection1:hover,
+.OtherSection2:hover,
+.OtherSection3:hover {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  transform: translateY(-2px); /* Eleva ligeramente el botón */
+}
+
+/* Responsive - pantallas pequeñas */
 @media (max-width: 768px) {
-  .IntroductionSubtitle {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
+  .TitleZone {
+    padding-top: 1.5rem; /* Menos espacio arriba en móviles */
+  }
+
+  .ButtonsSection {
+    flex-direction: column; /* Botones en columna en móviles */
+    gap: 1rem; /* Menos espacio entre botones */
+  }
+
+  .OtherSection1,
+  .OtherSection2,
+  .OtherSection3 {
+    width: 100%; /* Botones ocupan todo el ancho en móviles */
+    max-width: 300px; /* Ancho máximo para que no sean demasiado grandes */
   }
 }
