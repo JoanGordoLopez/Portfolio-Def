@@ -14,8 +14,9 @@ body {
   flex-direction: row; /* Apila título y subtítulo verticalmente */
   align-items: flex-start; /* Centra horizontalmente */
   padding-top: 2rem; /* Espacio desde arriba */
-  margin-bottom: 3rem; /* Espacio debajo del título */
+  margin-bottom: 2rem; /* Espacio debajo del título */
   text-align: left; /* Centra el texto */
+  gap: 280px;
 }
 
 /* Título principal - tamaño responsive */
@@ -33,8 +34,9 @@ body {
 
 
 .ProfileImage {
-  width: 250px;
-  border-radius: 80%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -52,7 +54,8 @@ body {
   max-width: 800px; /* Ancho máximo para legibilidad */
   width: 100%; /* Ocupa todo el ancho disponible */
   margin-bottom: 2rem; /* Espacio debajo de la sección */
-  padding: 2rem; /* Espacio interno */
+  padding: 2; /* Espacio interno */
+  padding-top: 1rem; /* Espacio solo arriba */
   text-align: center; /* Centra el texto */
 }
 
@@ -79,8 +82,8 @@ body {
   gap: 1.5rem; /* Espacio entre botones */
   flex-wrap: wrap; /* Permite que los botones bajen de línea en pantallas pequeñas */
   justify-content: center; /* Centra los botones */
-  margin-top: 3rem; /* Espacio desde la sección anterior */
-  margin-bottom: 3rem; /* Espacio debajo de los botones */
+  margin-top: 1rem; /* Espacio desde la sección anterior */
+  margin-bottom: 1rem; /* Espacio debajo de los botones */
 }
 
 /* Estilos base para todos los botones */
