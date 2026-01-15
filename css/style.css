@@ -35,10 +35,10 @@ body {
 
 
 .ProfileImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 100px; /* Ancho de la foto de perfil */
+  height: 100px; /* Alto de la foto de perfil */
+  border-radius: 50%; /* Redondeo de la foto de perfil */
+  object-fit: cover; /* Omple el contenidor per fer que la foto de perfil sempre capigui*/
 }
 
 
@@ -79,12 +79,14 @@ body {
 
 /* Sección de botones - posicionada más abajo */
 .ButtonsSection {
-  display: flex; /* Alinea los botones en fila */
-  gap: 1.5rem; /* Espacio entre botones */
-  flex-wrap: wrap; /* Permite que los botones bajen de línea en pantallas pequeñas */
-  justify-content: center; /* Centra los botones */
-  margin-top: 1rem; /* Espacio desde la sección anterior */
-  margin-bottom: 1rem; /* Espacio debajo de los botones */
+  position: fixed;            /* Fija en pantalla */
+  left: 20px;                 /* Separación del borde izquierdo */
+  top: 50%;                   /* Centro vertical */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;     /* Barra vertical */
+  gap: 1rem;
+  z-index: 1000;
 }
 
 /* Estilos base para todos los botones */
