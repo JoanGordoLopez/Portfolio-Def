@@ -104,6 +104,12 @@ body {
   transition: all 0.3s ease;
 }
 
+.SidebarItem:hover{
+  background-color: #6e6e6e;
+  color: white;
+}
+
+
 /* Estilos base para todos los botones */
 .OtherSection1,
 .OtherSection2,
