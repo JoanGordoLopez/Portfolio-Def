@@ -7,6 +7,15 @@ body {
   padding: 0 20px; /* Añade espacio en los laterales */
   padding-left: 140px;
   min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  justify-content: flex-start;
+}
+
+main {
+  flex: 1;                 /* Empuja el footer hacia abajo */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Zona del título principal */
