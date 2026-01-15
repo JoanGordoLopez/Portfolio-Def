@@ -77,16 +77,19 @@ body {
   text-align: justify;
 }
 
-/* Sección de botones - posicionada más abajo */
-.ButtonsSection {
-  position: fixed;            /* Fija en pantalla */
-  left: 20px;                 /* Separación del borde izquierdo */
-  top: 50%;                   /* Centro vertical */
-  transform: translateY(-50%);
+.Sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;              /* Toda la altura */
+  width: 120px;               /* Ancho de la barra */
+  background-color: #f9f9f9;
   display: flex;
-  flex-direction: column;     /* Barra vertical */
-  gap: 1rem;
-  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;    /* Centrada verticalmente */
+  gap: 1.5rem;
+  border-right: 1px solid #ddd;
 }
 
 /* Estilos base para todos los botones */
