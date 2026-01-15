@@ -71,12 +71,14 @@ body {
 
 /* Texto de presentación - espacio reservado */
 .IntroductionText {
-  font-size: clamp(1rem, 2vw, 1.1rem); /* Tamaño responsive */
-  line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
-  color: #666; /* Color gris suave */
-  margin: 0;
-  text-align: justify;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.7;           /* un poco más de aire */
+  color: #666;
+  text-align: justify;        /* sigue justificado */
+  max-width: 650px;           /* 👈 clave: bloque más estrecho */
+  margin: 0 auto;             /* 👈 centra el bloque */
 }
+
 
 .Sidebar {
   position: fixed;
