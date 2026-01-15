@@ -5,6 +5,7 @@ body {
   flex-direction: column; /* Columna para apilar elementos verticalmente */
   align-items: center; /* Centra horizontalmente */
   padding: 0 20px; /* Añade espacio en los laterales */
+  padding-left: 140px;
   min-height: 100vh; /* Ocupa toda la altura de la ventana */
 }
 
@@ -90,6 +91,17 @@ body {
   justify-content: center;    /* Centrada verticalmente */
   gap: 1.5rem;
   border-right: 1px solid #ddd;
+}
+
+.SidebarItem {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 /* Estilos base para todos los botones */
