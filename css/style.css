@@ -144,6 +144,26 @@ main {
   color: #666;
 }
 
+.ProyectoLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.ProyectoNestcord {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ProyectoNestcord:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.ProyectoTituloNestcord{
+  margin-bottom: 12px;   /* separa el título del texto */
+  font-weight: 700;     /* negrita */
+}
 
 /* Responsive - pantallas pequeñas */
 @media (max-width: 768px) {
