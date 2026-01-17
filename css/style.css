@@ -119,16 +119,76 @@ main {
   color: white;
 }
 
-.TextoProyectos {
-  max-width: 700px;
+/* ============================= */
+/* 🔄 UNIFICACIÓN PROYECTOS + EXPERIENCIA */
+/* ============================= */
+
+/* 🔹 CAMBIO: unificamos el contenedor de Proyectos y Experiencia */
+.TextoProyectos,
+.ContenedorExperiencia {
+  max-width: 700px;        /* mismo ancho para ambas secciones */
+  width: 100%;
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* espacio entre proyectos */
+  gap: 20px;               /* mismo espacio entre cards */
 }
 
-.Proyecto {
-  padding: 1rem 0;
+/* 🔹 CAMBIO: estilo de CARD unificado */
+.Proyecto,
+.ProyectoNestcord,
+.Experiencia1,
+.Experiencia2,
+.Experiencia3 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* 🔹 CAMBIO: hover unificado para todas las cards */
+.Proyecto:hover,
+.ProyectoNestcord:hover,
+.Experiencia1:hover,
+.Experiencia2:hover,
+.Experiencia3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================= */
+/* 🔄 UNIFICACIÓN DE TÍTULOS */
+/* ============================= */
+
+/* 🔹 CAMBIO: mismo estilo para títulos de Proyectos y Experiencia */
+.ProyectoTitulo,
+.TituloExperiencia {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* 🔹 CAMBIO: año tratado como subtítulo */
+h2.TituloExperiencia {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+/* ============================= */
+/* 🔄 UNIFICACIÓN DE TEXTO */
+/* ============================= */
+
+/* 🔹 CAMBIO: mismo estilo para descripciones */
+.ProyectoDescripcion,
+.TextoExperiencia {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
 }
 
 .ProyectoTitulo {
@@ -150,20 +210,6 @@ main {
   display: block;
 }
 
-.ProyectoNestcord {
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.ProyectoNestcord:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.ProyectoTituloNestcord{
-  margin-bottom: 12px;   /* separa el título del texto */
-  font-weight: 700;     /* negrita */
-}
 
 .ContenedorExperiencia {
   display: flex;
