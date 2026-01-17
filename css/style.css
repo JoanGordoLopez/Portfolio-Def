@@ -188,6 +188,24 @@ main {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
+.TituloExperiencia {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Año */
+h2.TituloExperiencia {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Texto */
+.TextoExperiencia {
+  line-height: 1.5;
+  color: #333;
+}
+
 /* Responsive - pantallas pequeñas */
 @media (max-width: 768px) {
   .TitleZone {
