@@ -121,6 +121,14 @@ main {
   border-bottom: 1px solid #eee;    /* Linea sutil entre items */
 }
 
+.lista-habilidades li::before {
+  content: "•";
+  color: #4da6fa;  /* punto azul */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
 .lista-habilidades li:last-child {
   border-bottom: none;              /* Quita la linea del ultimo item */
 }
@@ -195,7 +203,7 @@ main {
 
   .sidebar ul li a:hover {
     text-decoration: underline;
-
+    color: #4da6fa; /* cambia el texto al azul al pasar el ratón */
   }
     .sidebar i {
   font-size: 18px;
@@ -270,7 +278,7 @@ main {
 
   .sidebar ul li a:hover {
     text-decoration: underline;
-
+    color: #4da6fa; /* cambia el texto al azul al pasar el ratón */
   }
 
   .sidebar i {
