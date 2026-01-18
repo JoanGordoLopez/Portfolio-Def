@@ -8,7 +8,10 @@ body {
   line-height: 1.6;                 /* Espacio entre lineas */
   color: #333;                      /* Color del texto */
   padding: 20px;                    /* Espacio alrededor del contenido */
+  min-height: 100vh;
+  margin: 0;
 }
+
 
 /* CABECERA */
 
@@ -20,6 +23,11 @@ body {
   padding-bottom: 20px;             /* Espacio interno abajo */
   border-bottom: 2px solid #333;    /* Linea separadora */
 }
+header.cabecera{
+  margin-left: 240px;
+}
+
+
 
 .cabecera img{
   width: 100px;                   /* Ajusta el ancho de la foto */
@@ -113,6 +121,43 @@ body {
 
 .lista-habilidades li:last-child {
   border-bottom: none;              /* Quita la linea del ultimo item */
+}
+
+.sidebar {
+  position: fixed;       /* sidebar fijo */
+  left: 0;
+  top: 0;
+  width: 220px;          /* ancho del sidebar */
+  height: 100vh;         /* ocupa toda la altura de la pantalla */
+  background-color: #1e293b; /* azul oscuro */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li{
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
 }
 
 /* ================================
