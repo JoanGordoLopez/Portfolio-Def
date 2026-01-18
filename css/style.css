@@ -23,11 +23,11 @@ body {
   padding-bottom: 20px;             /* Espacio interno abajo */
   border-bottom: 2px solid #333;    /* Linea separadora */
 }
-header.cabecera{
-  margin-left: 240px;
+
+header.cabecera,
+main {
+  margin-left: 240px; /* igual o un poco más que el ancho del sidebar (220px + padding) */
 }
-
-
 
 .cabecera img{
   width: 100px;                   /* Ajusta el ancho de la foto */
