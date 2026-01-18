@@ -10,15 +10,21 @@ body {
   padding: 20px;                    /* Espacio alrededor del contenido */
 }
 
-/* ================================
-   CABECERA
-   ================================ */
+/* CABECERA */
 
 .cabecera {
+  display: flex;                    /*Activa Flexbox*/
+  justify-content: space-between;   /*Deja espacio entre los elementos*/
   text-align: center;               /* Todo centrado en movil */
   margin-bottom: 30px;              /* Espacio debajo de la cabecera */
   padding-bottom: 20px;             /* Espacio interno abajo */
   border-bottom: 2px solid #333;    /* Linea separadora */
+}
+
+.cabecera img{
+  width: 100px;                   /* Ajusta el ancho de la foto */
+  height: auto;                   /* Ajusta la altura de la foto en base a Width */
+  border-radius: 50%;             /* Redondea el borde de la imagen */             
 }
 
 .nombre {
