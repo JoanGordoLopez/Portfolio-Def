@@ -140,6 +140,8 @@ main {
 .Experiencia1,
 .Experiencia2,
 .Experiencia3 {
+  width: 100%;
+  box-sizing: border-box;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 12px;
@@ -162,6 +164,12 @@ main {
   color: #333;
 }
 
+.ProyectoTitulo,
+.ProyectoTitulo a {
+  font-weight: 700;
+  display: block;
+}
+
 .ProyectoDescripcion,
 .TextoExperiencia {
   font-size: 1rem;
@@ -175,8 +183,6 @@ main {
   color: inherit;
   display: block;
 }
-
-
 
 .Experiencia1:hover,
 .Experiencia2:hover,
