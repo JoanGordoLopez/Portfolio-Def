@@ -12,7 +12,6 @@ body {
   margin: 0;
 }
 
-
 /* CABECERA */
 
 .cabecera {
@@ -26,7 +25,7 @@ body {
 
 header.cabecera,
 main {
-  margin-left: 240px; /* igual o un poco más que el ancho del sidebar (220px + padding) */
+  margin-left: 0; /* Por defecto 0, y cuando se cambia a ordenador/tablet ya aumenta */
 }
 
 .cabecera img{
@@ -124,40 +123,7 @@ main {
 }
 
 .sidebar {
-  position: fixed;       /* sidebar fijo */
-  left: 0;
-  top: 0;
-  width: 220px;          /* ancho del sidebar */
-  height: 100vh;         /* ocupa toda la altura de la pantalla */
-  background-color: #1e293b; /* azul oscuro */
-  color: white;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.sidebar h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li{
-  margin-bottom: 15px;
-}
-
-.sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.sidebar ul li a:hover {
-  text-decoration: underline;
+  display: none;
 }
 
 /* ================================
@@ -202,5 +168,47 @@ main {
 
   .nombre {
     font-size: 42px;
+  }
+  .sidebar {
+  display:block;  
+  position: fixed;       /* sidebar fijo */
+  left: 0;
+  top: 0;
+  width: 220px;          /* ancho del sidebar */
+  height: 100vh;         /* ocupa toda la altura de la pantalla */
+  background-color: #1e293b; /* azul oscuro */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  }
+
+  .sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar ul li{
+    margin-bottom: 15px;
+  }
+
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .sidebar ul li a:hover {
+    text-decoration: underline;
+
+  }
+  
+  header.cabecera, main {
+  margin-left: 240px; /* Aumentamos el margen para que así se muestre el sidebar */
   }
 }
