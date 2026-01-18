@@ -1,211 +1,154 @@
-/* Configuración del body - centra todo el contenido horizontalmente */
+/* ================================
+   ESTILOS BASE (MOVIL PRIMERO)
+   ================================ */
+
+/* Configuracion general del body */
 body {
+  font-family: Arial, sans-serif;   /* Fuente simple y legible */
+  line-height: 1.6;                 /* Espacio entre lineas */
+  color: #333;                      /* Color del texto */
+  padding: 20px;                    /* Espacio alrededor del contenido */
+}
+
+/* ================================
+   CABECERA
+   ================================ */
+
+.cabecera {
+  text-align: center;               /* Todo centrado en movil */
+  margin-bottom: 30px;              /* Espacio debajo de la cabecera */
+  padding-bottom: 20px;             /* Espacio interno abajo */
+  border-bottom: 2px solid #333;    /* Linea separadora */
+}
+
+.nombre {
+  font-size: 28px;                  /* Tamano del nombre */
+  margin: 0 0 5px 0;                /* Sin margen arriba, poco abajo */
+}
+
+.subtitulo {
+  font-size: 16px;                  /* Tamano del subtitulo */
+  color: #666;                      /* Gris para destacar menos */
+  margin: 0 0 15px 0;
+}
+
+.contacto p {
+  margin: 5px 0;                    /* Poco espacio entre datos */
+  font-size: 14px;                  /* Texto pequeno */
+}
+
+/* ================================
+   CONTENIDO PRINCIPAL
+   ================================ */
+
+.contenido {
+  max-width: 800px;                 /* Ancho maximo para legibilidad */
+  margin: 0 auto;                   /* Centra el contenido */
+}
+
+/* ================================
+   SECCIONES
+   ================================ */
+
+.seccion {
+  margin-bottom: 30px;              /* Espacio entre secciones */
+}
+
+.seccion-titulo {
+  font-size: 20px;                  /* Tamano del titulo de seccion */
+  border-bottom: 1px solid #ddd;    /* Linea debajo del titulo */
+  padding-bottom: 5px;              /* Espacio entre texto y linea */
+  margin-bottom: 15px;              /* Espacio debajo de la linea */
+}
+
+.seccion-texto {
   margin: 0;
-  display: flex;
-  flex-direction: column; /* Columna para apilar elementos verticalmente */
-  align-items: center; /* Centra horizontalmente */
-  padding: 0 20px; /* Añade espacio en los laterales */
-  padding-left: 140px;
-  min-height: 100vh; /* Ocupa toda la altura de la ventana */
-  justify-content: flex-start;
 }
 
-main {
-  flex: 1;                 /* Empuja el footer hacia abajo */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* ================================
+   ITEMS (Experiencia, Formacion)
+   ================================ */
+
+.item {
+  margin-bottom: 20px;              /* Espacio entre items */
 }
 
-/* Zona del título principal */
-.TitleZone {
-  display: flex;
-  flex-direction: row; /* Apila título y subtítulo verticalmente */
-  align-items: flex-start; /* Centra horizontalmente */
-  padding-top: 2rem; /* Espacio desde arriba */
-  margin-bottom: 2rem; /* Espacio debajo del título */
-  text-align: left; /* Centra el texto */
-  gap: 280px;
+.item-titulo {
+  font-size: 16px;                  /* Tamano del titulo del item */
+  margin: 0 0 3px 0;                /* Sin margen arriba */
 }
 
-/* Título principal - tamaño responsive */
-.IntroductionTitle {
-  font-size: clamp(1.5rem, 4vw, 3rem); /* Se ajusta según el ancho de pantalla */
-  font-weight: 700; /* Negrita */
+.item-lugar {
+  font-size: 14px;                  /* Texto mas pequeno */
+  color: #666;                      /* Color gris */
+  margin: 0 0 8px 0;
+}
+
+.item-descripcion {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ================================
+   LISTAS (Habilidades, Idiomas)
+   ================================ */
+
+.lista-habilidades {
+  list-style: none;                 /* Quita los puntos de la lista */
+  padding: 0;                       /* Quita el padding por defecto */
   margin: 0;
 }
 
-.TitleTextZone {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  align-self: center;
+.lista-habilidades li {
+  padding: 5px 0;                   /* Espacio arriba y abajo de cada item */
+  border-bottom: 1px solid #eee;    /* Linea sutil entre items */
 }
 
-
-.ProfileImage {
-  width: 100px; /* Ancho de la foto de perfil */
-  height: 100px; /* Alto de la foto de perfil */
-  border-radius: 50%; /* Redondeo de la foto de perfil */
-  object-fit: cover; /* Omple el contenidor per fer que la foto de perfil sempre capigui*/
+.lista-habilidades li:last-child {
+  border-bottom: none;              /* Quita la linea del ultimo item */
 }
 
+/* ================================
+   TABLET (min-width: 600px)
+   ================================ */
 
-/* Subtítulo - ligeramente más pequeño y transparente */
-.IntroductionSubtitle {
-  font-size: clamp(1.3rem, 3vw, 2rem); /* Tamaño responsive */
-  font-weight: 400; /* Peso normal */
-  opacity: 0.8; /* Ligeramente transparente */
-  margin-top: 0.5rem; /* Pequeño espacio sobre el subtítulo */
-}
-
-/* Sección "Sobre mi" - contenedor principal */
-.AboutMeSection {
-  max-width: 800px; /* Ancho máximo para legibilidad */
-  width: 100%; /* Ocupa todo el ancho disponible */
-  margin-bottom: 2rem; /* Espacio debajo de la sección */
-  padding: 2; /* Espacio interno */
-  padding-top: 1rem; /* Espacio solo arriba */
-  text-align: center; /* Centra el texto */
-}
-
-/* Título de la sección "Sobre mi" */
-.SectionTitle {
-  font-size: clamp(1.2rem, 3vw, 1.8rem); /* Tamaño responsive */
-  font-weight: 600; /* Semi-negrita */
-  margin-bottom: 1.5rem; /* Espacio debajo del título */
-  color: #333; /* Color del texto */
-}
-
-/* Texto de presentación - espacio reservado */
-.IntroductionText {
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  line-height: 1.9;           /* un poco más de aire */
-  color: #666;
-  text-align: justify;        /* sigue justificado */
-  max-width: 650px;           /* 👈 clave: bloque más estrecho */
-  margin: 0 auto;             /* 👈 centra el bloque */
-}
-
-.Sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;              /* Toda la altura */
-  width: 200px;               /* Ancho de la barra */
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;    /* Centrada verticalmente */
-  gap: 1.5rem;
-  border-right: 1px solid #ddd;
-}
-
-.SidebarItem {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.5rem;
-  font-weight: 500;
-  padding: 0.5rem 0;
-  width: 100%;
-  text-align: center;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.SidebarItem:hover{
-  transform: translateX(6px);;
-}
-
-/* ============================= */
-/* 🔄 UNIFICACIÓN PROYECTOS + EXPERIENCIA */
-/* ============================= */
-
-/* 🔹 CAMBIO: unificamos el contenedor de Proyectos y Experiencia */
-.TextoProyectos,
-.ContenedorExperiencia {
-  max-width: 700px;        /* mismo ancho para ambas secciones */
-  width: 100%;
-  margin: 3rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;               /* mismo espacio entre cards */
-}
-
-/* 🔹 CAMBIO: estilo de CARD unificado */
-.Proyecto,
-.ProyectoNestcord,
-.Experiencia1,
-.Experiencia2,
-.Experiencia3 {
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-
-/* ============================= */
-/* 🔄 UNIFICACIÓN DE TÍTULOS */
-/* ============================= */
-
-/* 🔹 CAMBIO: mismo estilo para títulos de Proyectos y Experiencia */
-.ProyectoTitulo,
-.TituloExperiencia {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: #333;
-}
-
-.ProyectoTitulo,
-.ProyectoTitulo a {
-  font-weight: 700;
-  display: block;
-}
-
-.ProyectoDescripcion,
-.TextoExperiencia {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #666;
-}
-
-
-.ProyectoLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.Experiencia1:hover,
-.Experiencia2:hover,
-.Experiencia3:hover,
-.Proyecto:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-
-/* Año */
-h2.TituloExperiencia {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 12px;
-}
-
-
-/* Responsive - pantallas pequeñas */
-@media (max-width: 768px) {
-  .TitleZone {
-    padding-top: 1.5rem; /* Menos espacio arriba en móviles */
+@media (min-width: 600px) {
+  body {
+    padding: 40px;                  /* Mas espacio en tablet */
   }
 
+  .nombre {
+    font-size: 36px;                /* Nombre mas grande */
+  }
 
+  .seccion-titulo {
+    font-size: 22px;
+  }
 
+  .item-titulo {
+    font-size: 18px;
+  }
+}
+
+/* ================================
+   ORDENADOR (min-width: 900px)
+   ================================ */
+
+@media (min-width: 900px) {
+  body {
+    padding: 60px;                  /* Aun mas espacio en ordenador */
+  }
+
+  .cabecera {
+    text-align: left;               /* Alineado a la izquierda en desktop */
+  }
+
+  .contacto {
+    display: flex;                  /* Los datos de contacto en fila */
+    gap: 20px;                      /* Espacio entre cada dato */
+  }
+
+  .nombre {
+    font-size: 42px;
+  }
 }
