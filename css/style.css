@@ -159,6 +159,7 @@ main {
 
   .cabecera {
     text-align: left;               /* Alineado a la izquierda en desktop */
+    font-size: 2.5rem;
   }
 
   .contacto {
