@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Configuración básica del documento -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>Portfolio - Joan Gordo</title>
 
+  <!-- Reset de estilos para evitar diferencias entre navegadores -->
   <link rel="stylesheet" href="./css/reset.css" />
+
+  <!-- Hoja de estilos principal del portfolio -->
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-
 <body>
 
+  <!-- Barra lateral de navegación principal -->
   <nav class="Sidebar">
     <a href="/index.html" class="SidebarItem">Sobre Mí</a>
     <a href="/Experiencia.html" class="SidebarItem">Experiencia</a>
@@ -19,31 +25,45 @@
     <a href="/Habilidades.html" class="SidebarItem">Habilidades</a>
     <a href="/seccionpordefinir.html" class="SidebarItem">Por definir</a>
   </nav>
+
+  <!-- Contenido principal de la página -->
   <main>
 
+    <!-- Cabecera con nombre, sección actual y foto de perfil -->
     <header class="TitleZone">
       <div class="TitleTextZone">
         <h1 class="IntroductionTitle">Joan Gordo</h1>
-        <h2 class="IntroductionSubtitle">Sobre Mí</h2>
+        <h2 class="IntroductionSubtitle">Proyectos</h2>
       </div>
+
+      <!-- Imagen de perfil -->
       <img src="/img/JoanGordoPFP.jpg" alt="JoanGordoPFP" class="ProfileImage">
     </header>
 
+    <!-- Sección que contiene todas las tarjetas de proyectos -->
     <section class="TextoProyectos">
 
+      <!-- Proyecto principal: Nestcord -->
       <article class="Proyecto">
+        <!-- Título del proyecto con enlace externo -->
         <h3 class="ProyectoTitulo">
           <a href="https://nestcord.vercel.app" target="_blank" rel="noopener">
             Nestcord
           </a>
         </h3>
-        <h2 class="TituloExperiencia">2024</h2>
+
+        <!-- Año del proyecto -->
+        <h2 class="TituloExperiencia">2025</h2>
+
+        <!-- Descripción del proyecto -->
         <p class="ProyectoDescripcion">
           Para el final del grado medio, yo junto a un compañero creamos Nestcord, una red social inspirada en X. 
           Este proyecto sirvió de introducción a las BBDD, la programación con lenguajes como TypeScript, CSS, HTML y PHP.
+          Para visitar el proyecto pulsa en el título y deja que Nestcord te sorprenda
         </p>
       </article>
 
+      <!-- Proyecto secundario -->
       <article class="Proyecto">
         <h3 class="ProyectoTitulo">Proyecto 2</h3>
         <h2 class="TituloExperiencia">2025</h2>
@@ -52,6 +72,7 @@
         </p>
       </article>
 
+      <!-- Proyecto adicional -->
       <article class="Proyecto">
         <h3 class="ProyectoTitulo">Proyecto 3</h3>
         <h2 class="TituloExperiencia">2023</h2>
@@ -64,6 +85,7 @@
 
   </main>
 
+  <!-- Pie de página con información de contacto -->
   <footer id="contact" class="Footer">
     <p>Teléfono: <a href="tel:+34692924435">+34 692 92 44 35</a></p>
     <p>Correo de contacto: <a href="mailto:joan.gordo.lopez@email.com">joan.gordo.lopez@email.com</a></p>
