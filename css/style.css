@@ -148,15 +148,6 @@ main {
   cursor: pointer;
 }
 
-/* 🔹 CAMBIO: hover unificado para todas las cards */
-.Proyecto:hover,
-.ProyectoNestcord:hover,
-.Experiencia1:hover,
-.Experiencia2:hover,
-.Experiencia3:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
 
 /* ============================= */
 /* 🔄 UNIFICACIÓN DE TÍTULOS */
@@ -171,19 +162,6 @@ main {
   color: #333;
 }
 
-/* 🔹 CAMBIO: año tratado como subtítulo */
-h2.TituloExperiencia {
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: #777;
-  margin-bottom: 12px;
-}
-
-/* ============================= */
-/* 🔄 UNIFICACIÓN DE TEXTO */
-/* ============================= */
-
-/* 🔹 CAMBIO: mismo estilo para descripciones */
 .ProyectoDescripcion,
 .TextoExperiencia {
   font-size: 1rem;
@@ -191,18 +169,6 @@ h2.TituloExperiencia {
   color: #666;
 }
 
-.ProyectoTitulo {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.ProyectoDescripcion {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #666;
-}
 
 .ProyectoLink {
   text-decoration: none;
@@ -211,21 +177,6 @@ h2.TituloExperiencia {
 }
 
 
-.ContenedorExperiencia {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.Experiencia1,
-.Experiencia2,
-.Experiencia3 {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
 .Experiencia1:hover,
 .Experiencia2:hover,
@@ -234,10 +185,6 @@ h2.TituloExperiencia {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
-.TituloExperiencia {
-  font-weight: 700;
-  margin-bottom: 6px;
-}
 
 /* Año */
 h2.TituloExperiencia {
@@ -246,11 +193,6 @@ h2.TituloExperiencia {
   margin-bottom: 12px;
 }
 
-/* Texto */
-.TextoExperiencia {
-  line-height: 1.5;
-  color: #333;
-}
 
 /* Responsive - pantallas pequeñas */
 @media (max-width: 768px) {
