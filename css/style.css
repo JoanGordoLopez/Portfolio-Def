@@ -37,6 +37,8 @@ main {
 .nombre {
   font-size: 28px;                  /* Tamano del nombre */
   margin: 0 0 5px 0;                /* Sin margen arriba, poco abajo */
+  position: relative;  /* Activa el desplazamiento */
+  top: 60px;           /* Mueve el texto hacia abajo */
 }
 
 .subtitulo {
@@ -137,6 +139,8 @@ main {
 
   .nombre {
     font-size: 36px;                /* Nombre mas grande */
+    position: relative;  /* Activa el desplazamiento */
+    top: 60px;           /* Mueve el texto hacia abajo */
   }
 
   .seccion-titulo {
@@ -169,6 +173,8 @@ main {
 
   .nombre {
     font-size: 42px;
+    position: relative;  /* Activa el desplazamiento */
+    top: 60px;           /* Mueve el texto hacia abajo */
   }
   .sidebar {
   display:block;  
