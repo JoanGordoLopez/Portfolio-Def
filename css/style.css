@@ -149,26 +149,42 @@ main {
    ================================ */
 
 .lista-habilidades {
-  list-style: none;                 /* Quita los puntos de la lista */
-  padding: 0;                       /* Quita el padding por defecto */
+  list-style: none;       /* Quita los puntos de la lista */
+  padding: 0;
   margin: 0;
 }
 
 .lista-habilidades li {
-  padding: 5px 0;                   /* Espacio arriba y abajo de cada item */
-  border-bottom: 1px solid #eee;    /* Linea sutil entre items */
+  position: relative;
+  padding-right: 120px;   /* Espacio para las estrellas a la derecha */
+  margin-bottom: 12px;        /* Tamaño del texto de la habilidad */
+  border-bottom: 1px solid #eee; /* Línea sutil debajo */
+  line-height: 1.6;
 }
 
+/* Quitamos los puntos anteriores */
 .lista-habilidades li::before {
-  content: "•";
-  color: #4da6fa;  /* punto azul */
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  content: none;          /* Ya no necesitamos el punto */
 }
 
+/* Último item sin línea */
 .lista-habilidades li:last-child {
-  border-bottom: none;              /* Quita la linea del ultimo item */
+  border-bottom: none;
+}
+
+/* Contenedor de estrellas */
+.lista-habilidades .estrellas {
+  position: absolute;     /* Posiciona las estrellas dentro del li */
+  right: 0;               /* Pegadas al lado derecho */
+  top: 50%;               /* Centrado verticalmente */
+  transform: translateY(-50%);
+}
+
+/* Estilo de las estrellas */
+.lista-habilidades .estrellas i {
+  color: #4da6fa;         /* Azul corporativo */
+  margin-left: 2px;       /* Separación entre estrellas */
+  font-size: 16px;        /* Tamaño de las estrellas */
 }
 
 .sidebar {
