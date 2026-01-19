@@ -1,12 +1,36 @@
 /* ================================
+   VARIABLES CSS
+   ================================ */
+
+:root {
+  /* Colores de texto */
+  --color-texto: #333;
+  --color-texto-secundario: #666;
+  --color-texto-claro: white;
+  
+  /* Colores de fondo */
+  --color-fondo-sidebar: #1e293b;
+  
+  /* Colores de acento */
+  --color-acento: #4da6fa;
+  
+  /* Colores de bordes y líneas */
+  --color-borde: #ddd;
+  --color-linea-sutil: #eee;
+  
+  /* Fuentes */
+  --fuente-principal: Arial, sans-serif;
+}
+
+/* ================================
    ESTILOS BASE (MOVIL PRIMERO)
    ================================ */
 
 /* Configuracion general del body */
 body {
-  font-family: Arial, sans-serif;   /* Fuente simple y legible */
+  font-family: var(--fuente-principal);   /* Fuente simple y legible */
   line-height: 1.6;                 /* Espacio entre lineas */
-  color: #333;                      /* Color del texto */
+  color: var(--color-texto);        /* Color del texto */
   padding: 20px;                    /* Espacio alrededor del contenido */
   min-height: 100vh;
   margin: 0;
@@ -20,7 +44,7 @@ body {
   text-align: center;               /* Todo centrado en movil */
   margin-bottom: 30px;              /* Espacio debajo de la cabecera */
   padding-bottom: 20px;             /* Espacio interno abajo */
-  border-bottom: 2px solid #333;    /* Linea separadora */
+  border-bottom: 2px solid var(--color-texto);    /* Linea separadora */
 }
 
 header.cabecera,
@@ -43,7 +67,7 @@ main {
 
 .subtitulo {
   font-size: 16px;                  /* Tamano del subtitulo */
-  color: #666;                      /* Gris para destacar menos */
+  color: var(--color-texto-secundario);  /* Gris para destacar menos */
   margin: 0 0 15px 0;
 }
 
@@ -71,7 +95,7 @@ main {
 
 .seccion-titulo {
   font-size: 20px;                  /* Tamano del titulo de seccion */
-  border-bottom: 1px solid #ddd;    /* Linea debajo del titulo */
+  border-bottom: 1px solid var(--color-borde);    /* Linea debajo del titulo */
   padding-bottom: 5px;              /* Espacio entre texto y linea */
   margin-bottom: 15px;              /* Espacio debajo de la linea */
   display: flex;
@@ -82,7 +106,7 @@ main {
 
 .seccion-titulo i {
   font-size: 18px;
-  color: #4da6fa;
+  color: var(--color-acento);
 }
 
 
@@ -100,7 +124,7 @@ main {
   display: block;
   text-decoration: none;
   color: inherit;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-borde);
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 20px;
@@ -113,7 +137,7 @@ main {
 .proyecto-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  border-color: #4da6fa;
+  border-color: var(--color-acento);
   cursor: pointer;
 }
 
@@ -135,7 +159,7 @@ main {
 
 .item-lugar {
   font-size: 14px;                  /* Texto mas pequeno */
-  color: #666;                      /* Color gris */
+  color: var(--color-texto-secundario);  /* Color gris */
   margin: 0 0 8px 0;
 }
 
@@ -158,7 +182,7 @@ main {
   position: relative;
   padding-right: 120px;   /* Espacio para las estrellas a la derecha */
   margin-bottom: 12px;        /* Tamaño del texto de la habilidad */
-  border-bottom: 1px solid #eee; /* Línea sutil debajo */
+  border-bottom: 1px solid var(--color-linea-sutil); /* Línea sutil debajo */
   line-height: 1.6;
 }
 
@@ -182,7 +206,7 @@ main {
 
 /* Estilo de las estrellas */
 .lista-habilidades .estrellas i {
-  color: #4da6fa;         /* Azul corporativo */
+  color: var(--color-acento);         /* Azul corporativo */
   margin-left: 2px;       /* Separación entre estrellas */
   font-size: 16px;        /* Tamaño de las estrellas */
 }
@@ -194,7 +218,7 @@ main {
 .barra {
   display: block;
   height: 6px;
-  background-color: #4da6fa; /* verde */
+  background-color: var(--color-acento); /* azul acento */
   border-radius: 3px;
   margin-top: 3px;
 }
@@ -229,8 +253,8 @@ main {
     top: 0;
     left: 0;
     height: 100vh;
-    background-color: #1e293b;
-    color: white;
+    background-color: var(--color-fondo-sidebar);
+    color: var(--color-texto-claro);
     padding: 20px;
     box-sizing: border-box;
   }
@@ -257,7 +281,7 @@ main {
 
   .sidebar ul li a:hover {
     text-decoration: underline;
-    color: #4da6fa; /* cambia el texto al azul al pasar el ratón */
+    color: var(--color-acento); /* cambia el texto al azul al pasar el ratón */
   }
     .sidebar i {
   font-size: 18px;
@@ -302,8 +326,8 @@ main {
   top: 0;
   width: 400px;          /* ancho del sidebar */
   height: 100vh;         /* ocupa toda la altura de la pantalla */
-  background-color: #1e293b; /* azul oscuro */
-  color: white;
+  background-color: var(--color-fondo-sidebar); /* azul oscuro */
+  color: var(--color-texto-claro);
   padding: 20px;
   box-sizing: border-box;
   }
@@ -332,7 +356,7 @@ main {
 
   .sidebar ul li a:hover {
     text-decoration: underline;
-    color: #4da6fa; /* cambia el texto al azul al pasar el ratón */
+    color: var(--color-acento); /* cambia el texto al azul al pasar el ratón */
   }
 
   .sidebar i {
