@@ -382,23 +382,32 @@ main {
 
 @media print {
 
-  /* Oculta la sidebar (contacto, idiomas) */
+  /* ===========================
+     Contingut net
+     =========================== */
+
+  /* Amaga la sidebar */
   .sidebar {
     display: none;
   }
 
-  /* Oculta imágenes innecesarias */
+  /* Amaga imatges decoratives */
   img {
     display: none;
   }
 
-  /* Asegura que el texto sea negro y legible */
-  body, p, h1, h2, h3, h4 {
+  /* Fons blanc i text negre */
+  body, section, p, h1, h2, h3, h4 {
+    background: none;
     color: black;
   }
 
-  /* Quita el fondo de las secciones */
-  section {
-    background: none;
+  /* ===========================
+     Mostrar URLs dels enllaços
+     =========================== */
+
+  a::after {
+    content: " (" attr(href) ")";  /* Mostra la URL entre parèntesis */
+    font-size: 10pt;               /* Lleugerament més petit */
   }
 }
