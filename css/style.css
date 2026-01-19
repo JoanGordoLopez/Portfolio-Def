@@ -141,6 +141,16 @@ main {
   cursor: pointer;
 }
 
+.proyecto-card::before {
+  content: "";                  /* Contingut buit, només decoració */
+  display: block;
+  width: 60px;                  /* Amplada de la línia */
+  height: 3px;                  /* Grosor de la línia */
+  background-color: #4da6fa;    /* Blau corporatiu */
+  margin-bottom: 15px;          /* Espai entre separador i títol */
+  border-radius: 2px;           /* Línia amb cantons rodons */
+}
+
 
 
 /* ================================
