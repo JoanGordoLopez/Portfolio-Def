@@ -74,7 +74,17 @@ main {
   border-bottom: 1px solid #ddd;    /* Linea debajo del titulo */
   padding-bottom: 5px;              /* Espacio entre texto y linea */
   margin-bottom: 15px;              /* Espacio debajo de la linea */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
 }
+
+.seccion-titulo i {
+  font-size: 18px;
+  color: #4da6fa;
+}
+
 
 .seccionTexto {
   margin: 1rem 0rem;
