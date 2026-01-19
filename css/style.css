@@ -379,3 +379,26 @@ main {
   margin-left: 420px; /* Aumentamos el margen para que así se muestre el sidebar */
   }
 }
+
+@media print {
+
+  /* Oculta la sidebar (contacto, idiomas) */
+  .sidebar {
+    display: none;
+  }
+
+  /* Oculta imágenes innecesarias */
+  img {
+    display: none;
+  }
+
+  /* Asegura que el texto sea negro y legible */
+  body, p, h1, h2, h3, h4 {
+    color: black;
+  }
+
+  /* Quita el fondo de las secciones */
+  section {
+    background: none;
+  }
+}
