@@ -58,12 +58,12 @@ main section{
 
 .contacto-mobile {
   display: block;
-  margin-top: 8px;
+  margin-top: 0;
+  text-align: center;
   font-size: 14px;
   color: var(--color-acento);
   text-decoration: underline;
 }
-
 .cabecera img{
   width: 100px;                   /* Ajusta el ancho de la foto */
   height: auto;                   /* Ajusta la altura de la foto en base a Width */
@@ -71,15 +71,20 @@ main section{
 }
 
 .nombre {
-  font-size: 28px;                  /* Tamano del nombre */
-  margin: 0 0 5px 0;                /* Sin margen arriba, poco abajo */
-  position: relative;  /* Activa el desplazamiento */
-  top: 60px;           /* Mueve el texto hacia abajo */
+  font-size: 28px;
+  margin: 0;          /* quitar top: 60px */
+  position: static;   /* quitar position relative de móvil */
 }
+
 .titulo {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* columna vertical */
+  justify-content: flex-end; /* empuja todo hacia abajo */
+  align-items: center;      /* centrado horizontal */
+  gap: 8px;                 /* espacio entre nombre y contacto */
+  height: 100%;             /* ocupa toda la altura del contenedor padre */
 }
+
 
 .subtitulo {
   font-size: 16px;                  /* Tamano del subtitulo */
@@ -135,7 +140,7 @@ main section{
   background-color: #fff; /* fondo blanco */
   border: 1px solid #ccc; /* borde gris suave */
   border-radius: 10px; /* esquinas redondeadas */
-  padding: 20px;
+  padding: 10px 20px;
   margin: 20px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra ligera */
 }
