@@ -52,6 +52,14 @@ main {
   margin-left: 0; /* Por defecto 0, y cuando se cambia a ordenador/tablet ya aumenta */
 }
 
+.contacto-mobile {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--color-acento);
+  text-decoration: underline;
+}
+
 .cabecera img{
   width: 100px;                   /* Ajusta el ancho de la foto */
   height: auto;                   /* Ajusta la altura de la foto en base a Width */
@@ -256,6 +264,10 @@ main {
     font-size: 36px;                /* Nombre mas grande */
     position: relative;  /* Activa el desplazamiento */
     top: 60px;           /* Mueve el texto hacia abajo */
+  }
+
+  .contacto-mobile {
+    display: none;
   }
 
   .seccion-titulo {
