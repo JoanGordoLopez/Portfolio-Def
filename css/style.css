@@ -140,6 +140,15 @@ main section{
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra ligera */
 }
 
+.card-movil {
+  display: block; /* visible en móvil por defecto */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
 
 /* ================================
@@ -298,6 +307,10 @@ main section{
 
   .IdiomasMobil{
     display: none;
+  }
+
+  .card-movil {
+  display: none; /* por defecto oculto */
   }
   .seccion-titulo {
     font-size: 22px;
