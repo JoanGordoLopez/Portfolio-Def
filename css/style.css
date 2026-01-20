@@ -256,6 +256,10 @@ main {
   margin-top: 3px;
 }
 
+.IdiomasMobil {
+  margin-bottom: 40px;
+}
+
 /* ================================
    TABLET (min-width: 600px)
    ================================ */
@@ -276,9 +280,12 @@ main {
   }
 
   .ContactoSeccion{
-  display: none; 
+    display: none; 
   }
 
+  .IdiomasMobil{
+    display: none;
+  }
   .seccion-titulo {
     font-size: 22px;
   }
