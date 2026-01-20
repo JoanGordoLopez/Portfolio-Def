@@ -72,6 +72,10 @@ main {
   position: relative;  /* Activa el desplazamiento */
   top: 60px;           /* Mueve el texto hacia abajo */
 }
+.titulo {
+  display: flex;
+  flex-direction: column;
+}
 
 .subtitulo {
   font-size: 16px;                  /* Tamano del subtitulo */
@@ -122,6 +126,7 @@ main {
   margin: 1rem 0rem;
   text-align: justify;
 }
+
 
 
 /* ================================
@@ -268,6 +273,10 @@ main {
 
   .contacto-mobile {
     display: none;
+  }
+
+  .ContactoSeccion{
+  display: none; 
   }
 
   .seccion-titulo {
