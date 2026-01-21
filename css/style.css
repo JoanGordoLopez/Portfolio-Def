@@ -248,14 +248,11 @@ main section{
   display: none;
 }
 
-.sidebar footer{
-  position: absolute;       /* Lo sacamos del flujo normal */
-  bottom: 20px;             /* A 20px del borde inferior */
-  left: 20px;               /* Igual que el padding del sidebar */
-  width: calc(100% - 40px); /* Ajusta al ancho del sidebar menos padding */
-  font-size: 12px;
-  color: #ccc;              /* Gris claro */
+.sidebar footer {
+  margin-top: auto;
   text-align: center;
+  font-size: 12px;
+  color: #ccc;
 }
 
 .sidebar-texto {
@@ -265,6 +262,12 @@ main section{
   text-align: justify;
 }
 
+.sidebar-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
 
 .barra {
   display: block;
