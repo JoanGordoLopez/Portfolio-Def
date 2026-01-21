@@ -101,18 +101,11 @@ main section{
    CONTENIDO PRINCIPAL
    ================================ */
 
-.contenido {
-  max-width: 700px;                 /* Ancho maximo para legibilidad */
-  margin: 0 auto;                   /* Centra el contenido */
-}
 
 /* ================================
    SECCIONES
    ================================ */
 
-.seccion {
-  margin-bottom: 30px;              /* Espacio entre secciones */
-}
 
 .seccion-titulo {
   font-size: 20px;                  /* Tamano del titulo de seccion */
@@ -197,20 +190,10 @@ main section{
    ITEMS (Experiencia, Formacion)
    ================================ */
 
-.item {
-  margin-bottom: 20px;              /* Espacio entre items */
-}
-
 .item-titulo {
   font-size: 16px;                  /* Tamano del titulo del item */
   margin: 0 0 3px 0;                /* Sin margen arriba */
   text-decoration: underline;
-}
-
-.item-lugar {
-  font-size: 14px;                  /* Texto mas pequeno */
-  color: var(--color-texto-secundario);  /* Color gris */
-  margin: 0 0 8px 0;
 }
 
 .item-descripcion {
@@ -275,16 +258,20 @@ main section{
   text-align: center;
 }
 
+.sidebar-texto {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ddd;
+  text-align: justify;
+}
+
+
 .barra {
   display: block;
   height: 6px;
   background-color: var(--color-acento); /* azul acento */
   border-radius: 3px;
   margin-top: 3px;
-}
-
-.IdiomasMobil {
-  margin-bottom: 40px;
 }
 
 /* ================================
@@ -387,12 +374,6 @@ main section{
     text-align: left;               /* Alineado a la izquierda en desktop */
     font-size: 2.5rem;
   }
-
-  .contacto {
-    display: flex;                  /* Los datos de contacto en fila */
-    gap: 20px;                      /* Espacio entre cada dato */
-  }
-
   .nombre {
     font-size: 42px;
     position: relative;  /* Activa el desplazamiento */
@@ -407,7 +388,7 @@ main section{
   height: 100vh;         /* ocupa toda la altura de la pantalla */
   background-color: var(--color-fondo-sidebar); /* azul oscuro */
   color: var(--color-texto-claro);
-  padding: 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
   }
 
