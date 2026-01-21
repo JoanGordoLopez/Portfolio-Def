@@ -446,31 +446,81 @@ main section{
 @media print {
 
   /* ===========================
-     Contingut net
+     RESET DE LAYOUT
      =========================== */
 
-  /* Amaga la sidebar */
-  .sidebar {
-    display: none;
+
+  .nombre {
+    position: static !important;  /* quitar desplazamiento */
+    top: 0 !important;            /* asegurar que no haya offset */
+    margin-bottom: 0.5em;         /* espacio debajo del h1 */
   }
 
-  /* Amaga imatges decoratives */
-  img {
-    display: none;
-  }
-
-  /* Fons blanc i text negre */
-  body, section, p, h1, h2, h3, h4 {
+  body {
+    padding: 0;
+    margin: 0;
     background: none;
     color: black;
+    font-size: 11pt;
+  }
+
+  header.cabecera,
+  main {
+    margin-left: 0 !important; /* ⬅️ CLAVE */
   }
 
   /* ===========================
-     Mostrar URLs dels enllaços
+     OCULTAR ELEMENTOS INÚTILES
      =========================== */
 
+  .sidebar,
+  .contacto-mobile,
+  img {
+    display: none !important;
+  }
+
+  /* ===========================
+     LIMPIEZA VISUAL
+     =========================== */
+
+  .card,
+  .card-movil {
+    box-shadow: none;
+    border: 1px solid #000;
+    page-break-inside: avoid;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4 {
+    margin-top: 0;         /* quitar margen superior innecesario */
+    margin-bottom: 0.5em;  /* espacio debajo para no colisionar */
+    page-break-after: avoid; /* evitar salto de página justo después */
+  }
+
+  /* ===========================
+     ENLACES
+     =========================== */
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
   a::after {
-    content: " (" attr(href) ")";  /* Mostra la URL entre parèntesis */
-    font-size: 10pt;               /* Lleugerament més petit */
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    word-break: break-all;
+  }
+
+  /* ===========================
+     AJUSTES FINALES
+     =========================== */
+
+  .seccion-titulo {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
   }
 }
