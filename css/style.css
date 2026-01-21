@@ -248,12 +248,14 @@ main section{
   display: none;
 }
 
-.sidebar footer {
-  margin-top: auto;
-  text-align: center;
-  font-size: 12px;
-  color: #ccc;
-}
+  .sidebar footer {
+    position: static;   /* ⬅️ CLAVE */
+    margin-top: 40px;
+    width: auto;
+    font-size: 12px;
+    text-align: center;
+    color: #ccc;
+  }
 
 .sidebar-texto {
   font-size: 14px;
@@ -283,30 +285,22 @@ main section{
 
 @media (min-width: 600px) {
   body {
-    padding: 40px;                  /* Mas espacio en tablet */
+    padding: 40px;
   }
 
   .nombre {
-    font-size: 36px;                /* Nombre mas grande */
-    position: relative;  /* Activa el desplazamiento */
-    top: 60px;           /* Mueve el texto hacia abajo */
+    font-size: 36px;
+    position: relative;
+    top: 60px;
   }
 
-  .contacto-mobile {
-    display: none;
-  }
-
-  .ContactoSeccion{
-    display: none; 
-  }
-
-  .IdiomasMobil{
-    display: none;
-  }
-
+  .contacto-mobile,
+  .ContactoSeccion,
+  .IdiomasMobil,
   .card-movil {
-  display: none; /* por defecto oculto */
+    display: none;
   }
+
   .seccion-titulo {
     font-size: 22px;
   }
@@ -315,19 +309,33 @@ main section{
     font-size: 18px;
   }
 
+  /* 🔧 SIDEBAR CORREGIDO */
   .sidebar {
-    display: block; 
-    width: 300px; 
-    position: fixed;
+    display: block;
+    position: fixed;          /* ⬅️ VOLVEMOS A FIXED */
     top: 0;
     left: 0;
+    width: 300px;
     height: 100vh;
     background-color: var(--color-fondo-sidebar);
     color: var(--color-texto-claro);
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: auto;         /* ⬅️ CLAVE */
+    z-index: 1000;
   }
-    .sidebar h2 {
+
+    .sidebar footer {
+    position: static;
+    margin-top: 40px;
+    width: auto;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+  }
+
+
+  .sidebar h2 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 24px;
@@ -338,29 +346,31 @@ main section{
     padding: 0;
   }
 
-  .sidebar ul li{
+  .sidebar ul li {
     margin-bottom: 15px;
   }
 
   .sidebar ul li a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   .sidebar ul li a:hover {
     text-decoration: underline;
-    color: var(--color-acento); /* cambia el texto al azul al pasar el ratón */
-  }
-    .sidebar i {
-  font-size: 18px;
-  width: 20px; /* todos los iconos alineados */
-  text-align: center;
+    color: var(--color-acento);
   }
 
+  .sidebar i {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+  }
+
+  /* CONTENIDO DESPLAZADO CORRECTAMENTE */
   header.cabecera,
   main {
-    margin-left: 320px; /* se adapta al nuevo ancho del sidebar */
+    margin-left: 320px;
   }
 }
 
