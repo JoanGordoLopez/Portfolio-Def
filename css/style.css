@@ -4,22 +4,22 @@
 
 :root {
   /* Colores de texto */
-  --color-texto: #333;
-  --color-texto-secundario: #666;
-  --color-texto-claro: white;
+  --color-texto: #333;              /* Color principal del texto: gris oscuro */
+  --color-texto-secundario: #666;   /* Color secundario para textos menos importantes */
+  --color-texto-claro: white;       /* Color de texto claro, útil para fondos oscuros */
   
   /* Colores de fondo */
-  --color-fondo-sidebar: #1e293b;
+  --color-fondo-sidebar: #1e293b;   /* Fondo de la barra lateral (sidebar) en azul oscuro */
   
   /* Colores de acento */
-  --color-acento: #4da6fa;
+  --color-acento: #4da6fa;          /* Color de acento, usado en iconos o enlaces resaltados */
   
   /* Colores de bordes y líneas */
-  --color-borde: #ddd;
-  --color-linea-sutil: #eee;
+  --color-borde: #ddd;              /* Color gris para bordes suaves */
+  --color-linea-sutil: #eee;        /* Color gris muy claro para líneas sutiles */
   
   /* Fuentes */
-  --fuente-principal: Arial, sans-serif;
+  --fuente-principal: Arial, sans-serif;  /* Fuente principal de toda la página */
 }
 
 /* ================================
@@ -28,23 +28,23 @@
 
 /* Configuracion general del body */
 body {
-  font-family: var(--fuente-principal);   /* Fuente simple y legible */
-  line-height: 1.6;                 /* Espacio entre lineas */
-  color: var(--color-texto);        /* Color del texto */
-  padding: 20px;                    /* Espacio alrededor del contenido */
-  min-height: 100vh;
-  margin: 0;
+  font-family: var(--fuente-principal);   /* Aplica la fuente definida en :root */
+  line-height: 1.6;                       /* Altura de línea: hace el texto más legible */
+  color: var(--color-texto);              /* Color principal del texto */
+  padding: 20px;                          /* Espacio interno alrededor del contenido */
+  min-height: 100vh;                      /* Altura mínima de la página: ocupa toda la ventana */
+  margin: 0;                              /* Quita el margen por defecto del body */
 }
 
 /* CABECERA */
 
 .cabecera {
-  display: flex;                    /*Activa Flexbox*/
-  justify-content: space-between;   /*Deja espacio entre los elementos*/
-  text-align: center;               /* Todo centrado en movil */
+  display: flex;                    /* Activa Flexbox para alinear elementos en la cabecera */
+  justify-content: space-between;   /* Deja espacio entre el nombre y la imagen (o contacto) */
+  text-align: center;               /* Centra el contenido horizontalmente en móviles */
   margin-bottom: 30px;              /* Espacio debajo de la cabecera */
-  padding-bottom: 20px;             /* Espacio interno abajo */
-  border-bottom: 2px solid var(--color-texto);    /* Linea separadora */
+  padding-bottom: 20px;             /* Espacio interno abajo dentro de la cabecera */
+  border-bottom: 2px solid var(--color-texto);    /* Línea debajo de la cabecera */
 }
 
 header.cabecera,
@@ -53,16 +53,16 @@ main {
 }
 
 main section{
-  margin-bottom: 40px;
+  margin-bottom: 40px;  /* Espacio entre secciones del contenido principal */
 }
 
 .contacto-mobile {
-  display: block;
-  margin-top: 0;
-  text-align: center;
-  font-size: 14px;
-  color: var(--color-acento);
-  text-decoration: underline;
+  display: block;                /* Se muestra en móviles */
+  margin-top: 0;                 /* Sin margen arriba */
+  text-align: center;            /* Centrado horizontal del texto */
+  font-size: 14px;               /* Tamaño de letra pequeño */
+  color: var(--color-acento);    /* Color de acento */
+  text-decoration: underline;    /* Subrayado para indicar enlace */
 }
 .cabecera img{
   width: 100px;                   /* Ajusta el ancho de la foto */
@@ -71,7 +71,7 @@ main section{
 }
 
 .nombre {
-  font-size: 28px;
+  font-size: 28px;    /* Tamaño de letra del nombre */
   margin: 0;          /* quitar top: 60px */
   position: static;   /* quitar position relative de móvil */
 }
@@ -108,44 +108,42 @@ main section{
 
 
 .seccion-titulo {
-  font-size: 20px;                  /* Tamano del titulo de seccion */
-  border-bottom: 1px solid var(--color-borde);    /* Linea debajo del titulo */
-  padding-bottom: 5px;              /* Espacio entre texto y linea */
-  margin-bottom: 15px;              /* Espacio debajo de la linea */
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
+  font-size: 20px;                  /* Tamaño del título de la sección */
+  border-bottom: 1px solid var(--color-borde);    /* Línea debajo del título */
+  padding-bottom: 5px;              /* Espacio entre el texto del título y la línea */
+  margin-bottom: 15px;              /* Espacio entre la línea y el contenido siguiente */
+  display: flex;                    /* Activamos Flexbox para poder alinear iconos y texto */
+  align-items: center;              /* Centrado vertical de los elementos dentro del título */
+  gap: 8px;                         /* Espacio entre icono y texto dentro del título */
 }
 
 .seccion-titulo i {
-  font-size: 18px;
-  color: var(--color-acento);
+  font-size: 18px;                  /* Tamaño del icono dentro del título */
+  color: var(--color-acento);       /* Color de acento para destacar iconos */
 }
 
-
 .seccionTexto {
-  margin: 1rem 0rem;
-  text-align: justify;
+  margin: 1rem 0rem;                /* Espacio arriba y abajo del párrafo, sin margen horizontal */
+  text-align: justify;              /* Texto justificado para un bloque uniforme */
 }
 
 .card {
-  background-color: #fff; /* fondo blanco */
-  border: 1px solid #ccc; /* borde gris suave */
-  border-radius: 10px; /* esquinas redondeadas */
-  padding: 10px 20px;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra ligera */
+  background-color: #fff;           /* Fondo blanco */
+  border: 1px solid #ccc;           /* Borde gris claro */
+  border-radius: 10px;              /* Bordes redondeados */
+  padding: 10px 20px;               /* Espacio interno dentro de la tarjeta */
+  margin: 20px 0;                    /* Margen arriba y abajo, separando las tarjetas */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera para dar profundidad */
 }
 
 .card-movil {
-  display: block; /* visible en móvil por defecto */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: block;                   /* Visible por defecto en móvil */
+  background-color: #fff;           /* Fondo blanco */
+  border: 1px solid #ccc;           /* Borde gris */
+  border-radius: 10px;              /* Bordes redondeados */
+  padding: 20px;                    /* Espacio interno más amplio que .card */
+  margin: 20px 0;                   /* Margen superior e inferior */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
 }
 
 
@@ -154,34 +152,33 @@ main section{
    ================================ */
 
 .proyecto-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid var(--color-borde);
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 20px;
+  display: block;                   /* Se comporta como bloque completo */
+  text-decoration: none;             /* Quita subrayado de enlaces */
+  color: inherit;                    /* Hereda color del contenedor */
+  border: 1px solid var(--color-borde); /* Borde gris claro */
+  border-radius: 8px;               /* Bordes ligeramente redondeados */
+  padding: 16px;                     /* Espacio interno */
+  margin-bottom: 20px;               /* Separación entre tarjetas de proyecto */
   transition: 
     transform 0.2s ease,
     box-shadow 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease;          /* Animación suave al pasar el ratón */
 }
-
 .proyecto-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  border-color: var(--color-acento);
-  cursor: pointer;
+  transform: translateY(-4px);               /* Sube la tarjeta ligeramente */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra más marcada */
+  border-color: var(--color-acento);        /* Borde azul al pasar el ratón */
+  cursor: pointer;                          /* Cursor de “mano” indicando clicable */
 }
 
 .proyecto-card::before {
-  content: "";                  /* Contingut buit, només decoració */
-  display: block;
-  width: 60px;                  /* Amplada de la línia */
-  height: 3px;                  /* Grosor de la línia */
-  background-color: #4da6fa;    /* Blau corporatiu */
-  margin-bottom: 15px;          /* Espai entre separador i títol */
-  border-radius: 2px;           /* Línia amb cantons rodons */
+  content: "";                  /* Contenido vacío, solo para decoración */
+  display: block;               /* Bloque independiente */
+  width: 60px;                  /* Ancho de la línea decorativa */
+  height: 3px;                  /* Grosor de la línea */
+  background-color: #4da6fa;    /* Color azul corporativo */
+  margin-bottom: 15px;          /* Espacio entre la línea y el título */
+  border-radius: 2px;           /* Bordes redondeados para suavizar */
 }
 
 
@@ -191,14 +188,14 @@ main section{
    ================================ */
 
 .item-titulo {
-  font-size: 16px;                  /* Tamano del titulo del item */
-  margin: 0 0 3px 0;                /* Sin margen arriba */
-  text-decoration: underline;
+  font-size: 16px;              /* Tamaño del título del item */
+  margin: 0 0 3px 0;            /* Solo margen inferior de 3px, nada arriba */
+  text-decoration: underline;   /* Subrayado para destacar el título */
 }
 
 .item-descripcion {
-  margin: 0;
-  font-size: 14px;
+  margin: 0;                     /* Quita márgenes por defecto */
+  font-size: 14px;               /* Tamaño de letra más pequeño */
 }
 
 /* ================================
@@ -206,77 +203,77 @@ main section{
    ================================ */
 
 .lista-habilidades {
-  list-style: none;       /* Quita los puntos de la lista */
-  padding: 0;
-  margin: 0;
+  list-style: none;       /* Quita los puntos de la lista de manera global */
+  padding: 0;             /* Quita el padding por defecto del ul */
+  margin: 0;              /* Quita el margen por defecto del ul */
 }
 
 .lista-habilidades li {
-  position: relative;
-  padding-right: 120px;   /* Espacio para las estrellas a la derecha */
-  margin-bottom: 12px;        /* Tamaño del texto de la habilidad */
-  border-bottom: 1px solid var(--color-linea-sutil); /* Línea sutil debajo */
-  line-height: 1.6;
+  position: relative;     /* Posiciona cada li relativo para poder colocar elementos internos (las estrellas) */
+  padding-right: 120px;   /* Deja espacio a la derecha para el contenedor de estrellas */
+  margin-bottom: 12px;    /* Separación vertical entre cada habilidad */
+  border-bottom: 1px solid var(--color-linea-sutil); /* Línea sutil debajo de cada item */
+  line-height: 1.6;       /* Altura de línea para mejorar legibilidad */
 }
 
 /* Quitamos los puntos anteriores */
 .lista-habilidades li::before {
-  content: none;          /* Ya no necesitamos el punto */
+  content: none;          /* Quita cualquier marcador de lista que pudiera aparecer */
 }
 
 /* Último item sin línea */
 .lista-habilidades li:last-child {
-  border-bottom: none;
+  border-bottom: none;    /* Elimina la línea inferior del último elemento */
 }
 
 /* Contenedor de estrellas */
 .lista-habilidades .estrellas {
-  position: absolute;     /* Posiciona las estrellas dentro del li */
-  right: 0;               /* Pegadas al lado derecho */
-  top: 50%;               /* Centrado verticalmente */
-  transform: translateY(-50%);
+  position: absolute;     /* Posiciona el contenedor dentro del li */
+  right: 0;               /* Lo coloca pegado al borde derecho del li */
+  top: 50%;               /* Centra verticalmente dentro del li */
+  transform: translateY(-50%); /* Ajusta para centrar exactamente respecto al texto */
 }
 
 /* Estilo de las estrellas */
 .lista-habilidades .estrellas i {
-  color: var(--color-acento);         /* Azul corporativo */
-  margin-left: 2px;       /* Separación entre estrellas */
-  font-size: 16px;        /* Tamaño de las estrellas */
+  color: var(--color-acento); /* Azul corporativo para destacar visualmente */
+  margin-left: 2px;           /* Separación entre cada estrella */
+  font-size: 16px;            /* Tamaño de las estrellas */
 }
 
 .sidebar {
-  display: none;
+  display: none; /* Por defecto la sidebar está oculta en móvil */
 }
 
-  .sidebar footer {
-    position: static;   /* ⬅️ CLAVE */
-    margin-top: 40px;
-    width: auto;
-    font-size: 12px;
-    text-align: center;
-    color: #ccc;
-  }
+.sidebar footer {
+  position: static;   /* Posición normal en el flujo, ya no absoluta */
+  margin-top: 40px;   /* Separación respecto al contenido anterior */
+  width: auto;        /* Usa el ancho disponible del contenedor */
+  font-size: 12px;    /* Tamaño pequeño para el texto del footer */
+  text-align: center; /* Centrado horizontal del texto */
+  color: #ccc;        /* Color gris claro para el texto */
+}
 
 .sidebar-texto {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #ddd;
-  text-align: justify;
+  font-size: 14px;        /* Tamaño del texto dentro del sidebar */
+  line-height: 1.5;       /* Altura de línea para legibilidad */
+  color: #ddd;            /* Color de texto gris claro */
+  text-align: justify;    /* Texto justificado */
 }
 
 .sidebar-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo ligeramente translúcido */
+  border-radius: 10px;      /* Bordes redondeados */
+  padding: 20px;            /* Espacio interno */
+  margin-bottom: 30px;      /* Separación entre tarjetas del sidebar */
 }
 
 .barra {
-  display: block;
-  height: 6px;
-  background-color: var(--color-acento); /* azul acento */
-  border-radius: 3px;
-  margin-top: 3px;
+  display: block;                 /* Se asegura que la barra ocupe todo el ancho disponible */
+  height: 6px;                    /* Altura de la barra */
+  background-color: var(--color-acento); /* Color azul corporativo */
+  border-radius: 3px;             /* Bordes redondeados para suavizar */
+  margin-top: 3px;                /* Separación respecto al texto anterior */
 }
 
 /* ================================
@@ -285,94 +282,92 @@ main section{
 
 @media (min-width: 600px) {
   body {
-    padding: 40px;
+    padding: 40px;   /* Aumenta el padding alrededor del contenido para tablets */
   }
 
   .nombre {
-    font-size: 36px;
-    position: relative;
-    top: 60px;
+    font-size: 36px;     /* Aumenta el tamaño del nombre principal */
+    position: relative;  /* Permite moverlo con 'top' */
+    top: 60px;           /* Baja el nombre 60px desde su posición original */
   }
 
   .contacto-mobile,
   .ContactoSeccion,
   .IdiomasMobil,
   .card-movil {
-    display: none;
+    display: none;       /* Oculta elementos pensados solo para móvil */
   }
 
   .seccion-titulo {
-    font-size: 22px;
+    font-size: 22px;     /* Aumenta el tamaño de los títulos de sección */
   }
 
   .item-titulo {
-    font-size: 18px;
+    font-size: 18px;     /* Aumenta el tamaño de los títulos de ítems */
   }
 
-  /* 🔧 SIDEBAR CORREGIDO */
   .sidebar {
-    display: block;
-    position: fixed;          /* ⬅️ VOLVEMOS A FIXED */
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 100vh;
-    background-color: var(--color-fondo-sidebar);
-    color: var(--color-texto-claro);
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;         /* ⬅️ CLAVE */
-    z-index: 1000;
+    display: block;          /* Se asegura que el sidebar sea visible */
+    position: fixed;          /* Mantiene el sidebar fijo mientras se hace scroll */
+    top: 0;                   /* Pegado al borde superior de la pantalla */
+    left: 0;                  /* Pegado al borde izquierdo de la pantalla */
+    width: 300px;             /* Ancho fijo del sidebar */
+    height: 100vh;            /* Ocupa toda la altura de la ventana */
+    background-color: var(--color-fondo-sidebar); /* Color de fondo oscuro */
+    color: var(--color-texto-claro);              /* Color de texto claro */
+    padding: 20px;            /* Espacio interno del sidebar */
+    box-sizing: border-box;   /* Incluye padding en el ancho total */
+    overflow-y: auto;         /* Permite scroll interno si el contenido es más alto que la pantalla */
+    z-index: 1000;            /* Asegura que el sidebar esté por encima de otros elementos */
   }
 
-    .sidebar footer {
-    position: static;
-    margin-top: 40px;
-    width: auto;
-    text-align: center;
-    font-size: 12px;
-    color: #ccc;
+  .sidebar footer {
+    position: static;         /* El footer se posiciona normalmente al final del sidebar */
+    margin-top: 40px;         /* Separación respecto al contenido anterior */
+    width: auto;              /* Ancho automático */
+    text-align: center;       /* Centrado horizontal */
+    font-size: 12px;          /* Tamaño de fuente pequeño */
+    color: #ccc;              /* Color gris claro */
   }
-
 
   .sidebar h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-top: 0;            /* Sin espacio arriba */
+    margin-bottom: 20px;      /* Espacio debajo del título */
+    font-size: 24px;          /* Tamaño de título dentro del sidebar */
   }
 
   .sidebar ul {
-    list-style: none;
-    padding: 0;
+    list-style: none;         /* Sin viñetas */
+    padding: 0;               /* Sin padding interno */
   }
 
   .sidebar ul li {
-    margin-bottom: 15px;
+    margin-bottom: 15px;      /* Separación entre elementos de la lista */
   }
 
   .sidebar ul li a {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex;            /* Alinea íconos y texto en línea */
+    align-items: center;      /* Centrado vertical */
+    gap: 12px;                /* Separación entre icono y texto */
   }
 
   .sidebar ul li a:hover {
-    text-decoration: underline;
-    color: var(--color-acento);
+    text-decoration: underline;        /* Subraya el enlace al pasar el cursor */
+    color: var(--color-acento);        /* Cambia el color del texto al azul corporativo */
   }
 
   .sidebar i {
-    font-size: 18px;
-    width: 20px;
-    text-align: center;
+    font-size: 18px;          /* Tamaño de los iconos dentro de la lista */
+    width: 20px;              /* Alinea todos los iconos a la misma anchura */
+    text-align: center;       /* Centrado del icono */
   }
 
   /* CONTENIDO DESPLAZADO CORRECTAMENTE */
   header.cabecera,
   main {
-    margin-left: 320px;
+    margin-left: 320px;       /* Deja espacio para el sidebar a la izquierda */
   }
-}
+} /* Fin del @media (min-width: 600px) */
 
 /* ================================
    ORDENADOR (min-width: 900px)
@@ -385,63 +380,64 @@ main section{
 
   .cabecera {
     text-align: left;               /* Alineado a la izquierda en desktop */
-    font-size: 2.5rem;
+    font-size: 2.5rem;              /* Aumenta el tamaño del texto de la cabecera */
   }
   .nombre {
-    font-size: 42px;
+    font-size: 42px;     /* Aumenta el tamaño del nombre principal */ 
     position: relative;  /* Activa el desplazamiento */
     top: 60px;           /* Mueve el texto hacia abajo */
   }
+
   .sidebar {
-  display:block;  
-  position: fixed;       /* sidebar fijo */
-  left: 0;
-  top: 0;
-  width: 400px;          /* ancho del sidebar */
-  height: 100vh;         /* ocupa toda la altura de la pantalla */
-  background-color: var(--color-fondo-sidebar); /* azul oscuro */
-  color: var(--color-texto-claro);
-  padding: 40px 20px;
-  box-sizing: border-box;
+    display:block;  
+    position: fixed;       /* Fija el sidebar a la ventana, permanece visible al hacer scroll */
+    left: 0;               /* Pegado al borde izquierdo */
+    top: 0;                /* Pegado al borde superior */
+    width: 400px;          /* Ancho fijo más grande que en tablet */
+    height: 100vh;         /* Ocupa toda la altura de la ventana */
+    background-color: var(--color-fondo-sidebar); /* Fondo oscuro del sidebar */
+    color: var(--color-texto-claro);              /* Texto claro para contraste */
+    padding: 40px 20px;    /* Espacio interno: 40px arriba/abajo y 20px izquierda/derecha */
+    box-sizing: border-box; /* Incluye padding dentro del ancho total */
   }
 
   .sidebar h2 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-top: 10px;       /* Pequeño espacio arriba */
+    margin-bottom: 20px;    /* Espacio debajo del título */
+    font-size: 24px;        /* Tamaño de los títulos dentro del sidebar */
   }
 
   .sidebar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;       /* Quita los puntos de la lista */
+    margin: 0;              /* Sin margen */
+    padding: 0;             /* Sin padding */
   }
 
   .sidebar ul li{
-    margin-bottom: 15px;
+    margin-bottom: 15px;    /* Separación entre elementos de la lista */
   }
 
   .sidebar ul li a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;           /* Alinea iconos y texto horizontalmente */
+    align-items: center;     /* Centrado vertical */
+    gap: 12px;               /* Espacio entre icono y texto */
   }
 
   .sidebar ul li a:hover {
-    text-decoration: underline;
-    color: var(--color-acento); /* cambia el texto al azul al pasar el ratón */
+    text-decoration: underline;    /* Subraya al pasar el cursor */
+    color: var(--color-acento);    /* Cambia color del texto al azul corporativo */
   }
 
   .sidebar i {
-  font-size: 18px;
-  width: 20px; /* todos los iconos alineados */
-  text-align: center;
+    font-size: 18px;          /* Tamaño de los iconos */
+    width: 20px;              /* Todos los iconos alineados a la misma anchura */
+    text-align: center;       /* Centrado horizontal del icono */
   }
   
   header.cabecera, main {
-  margin-left: 420px; /* Aumentamos el margen para que así se muestre el sidebar */
+    margin-left: 420px; /* Deja espacio a la izquierda para el sidebar más ancho */
   }
-}
+} /* Fin del @media (min-width: 900px) */
 
 @media print {
 
@@ -457,16 +453,16 @@ main section{
   }
 
   body {
-    padding: 0;
-    margin: 0;
-    background: none;
-    color: black;
-    font-size: 11pt;
+    padding: 0;           /* eliminar padding del body para imprimir */
+    margin: 0;            /* eliminar margen por defecto */
+    background: none;     /* eliminar fondos de color */
+    color: black;         /* texto negro para buena legibilidad */
+    font-size: 11pt;      /* tamaño de fuente cómodo para imprimir */
   }
 
   header.cabecera,
   main {
-    margin-left: 0 !important; /* ⬅️ CLAVE */
+    margin-left: 0 !important; /* ⬅️ eliminar espacio que se dejaba para el sidebar */
   }
 
   /* ===========================
@@ -476,7 +472,7 @@ main section{
   .sidebar,
   .contacto-mobile,
   img {
-    display: none !important;
+    display: none !important; /* ocultar sidebar, botones de contacto móvil e imágenes */
   }
 
   /* ===========================
@@ -485,19 +481,19 @@ main section{
 
   .card,
   .card-movil {
-    box-shadow: none;
-    border: 1px solid #000;
-    page-break-inside: avoid;
+    box-shadow: none;           /* quitar sombra que no se imprime bien */
+    border: 1px solid #000;     /* borde visible en papel */
+    page-break-inside: avoid;   /* evita que una tarjeta se divida entre dos páginas */
   }
 
   section {
-    page-break-inside: avoid;
+    page-break-inside: avoid;   /* evita que las secciones se corten entre páginas */
   }
 
   h1, h2, h3, h4 {
-    margin-top: 0;         /* quitar margen superior innecesario */
-    margin-bottom: 0.5em;  /* espacio debajo para no colisionar */
-    page-break-after: avoid; /* evitar salto de página justo después */
+    margin-top: 0;              /* elimina margen superior innecesario */
+    margin-bottom: 0.5em;       /* margen inferior para separar títulos de contenido */
+    page-break-after: avoid;     /* evita salto de página justo después del título */
   }
 
   /* ===========================
@@ -505,14 +501,14 @@ main section{
      =========================== */
 
   a {
-    color: black;
-    text-decoration: none;
+    color: black;               /* enlaces en negro para legibilidad */
+    text-decoration: none;      /* eliminar subrayado en papel */
   }
 
   a::after {
-    content: " (" attr(href) ")";
-    font-size: 9pt;
-    word-break: break-all;
+    content: " (" attr(href) ")";  /* muestra la URL entre paréntesis */
+    font-size: 9pt;                /* tamaño de fuente más pequeño */
+    word-break: break-all;         /* permite dividir URLs largas */
   }
 
   /* ===========================
@@ -520,7 +516,7 @@ main section{
      =========================== */
 
   .seccion-titulo {
-    border-bottom: 1px solid black;
-    margin-bottom: 1em;
+    border-bottom: 1px solid black; /* línea separadora visible en papel */
+    margin-bottom: 1em;             /* espacio debajo del título */
   }
-}
+} /* fin de @media print */
